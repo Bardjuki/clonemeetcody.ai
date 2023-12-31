@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import { Box, Circle, Flex, Icon, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BsTwitterX } from 'react-icons/bs';
 import { FaDiscord } from 'react-icons/fa6';

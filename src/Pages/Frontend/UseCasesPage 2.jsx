@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
+
 import NavBar from '../../Components/HeaderComponents';
 import {
 	Box,
@@ -10,7 +8,6 @@ import {
 	Flex,
 	Image,
 	SimpleGrid,
-	Spinner,
 	Stack,
 	Text,
 } from '@chakra-ui/react';
@@ -20,20 +17,7 @@ import FooterComponents from '../../Components/FooterComponents';
 
 const UseCasesPage2 = () => {
 	const MotionBox = motion(Box);
-	const [loading, setLoading] = useState(false);
 
-	useEffect(() => {
-		document.title = loading ? 'Loading...' : 'Your App Title';
-		const timeout = setTimeout(() => {
-			setLoading(false);
-		}, 5000);
-
-		return () => clearTimeout(timeout);
-	}, []);
-
-	const handleNavLinkClick = () => {
-		setLoading(true);
-	};
 	return (
 		<>
 			<NavBar />
@@ -123,7 +107,7 @@ const UseCasesPage2 = () => {
 										transition: { duration: 0.5, repeat: Infinity },
 									}}
 								>
-									<NavLink to={'/'} onClick={handleNavLinkClick}>
+									<NavLink to={'/'} >
 										<Text
 											textColor={'white'}
 											fontSize={'x-large'}
@@ -358,14 +342,14 @@ const UseCasesPage2 = () => {
 					</SimpleGrid>
 				</Flex>
 				<Box gap={3} display={'flex'} mt={'4em'} justifyContent={'center'}>
-					<NavLink to={'/use-cases'} onClick={handleNavLinkClick}>
+					<NavLink to={'/use-cases'} >
 						<Circle size={'5em'} bg={'violet'}>
 							<Center>
 								<Text fontSize={'2em'}>1</Text>
 							</Center>
 						</Circle>
 					</NavLink>
-					<NavLink to={'/use-cases/page/2'} onClick={handleNavLinkClick}>
+					<NavLink to={'/use-cases/page/2'} >
 						<Circle size={'5em'} bg={'blue'} _hover={{ bg: 'violet' }}>
 							<Center>
 								<Text fontSize={'2em'}>2</Text>
@@ -406,14 +390,13 @@ const UseCasesPage2 = () => {
 							transition: { duration: 0.5, repeat: Infinity },
 						}}
 					>
-						<NavLink to={'/'} onClick={handleNavLinkClick}>
+						<NavLink to={'/'} >
 							<Text textColor={'white'} fontSize={'x-large'} fontWeight={700}>
 								Get Started Free
 							</Text>
 						</NavLink>
 					</MotionBox>
 				</Box>
-				{loading && <Spinner size="sm" />}
 			</Stack>
 			<FooterComponents />
 		</>

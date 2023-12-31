@@ -1,31 +1,22 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
+
 import {
 	Box,
 	Button,
-	Center,
-	Container,
 	Flex,
 	Image,
 	Link,
-	List,
-	ListItem,
 	Stack,
 	Text,
-	Table,
 	Icon,
 	useDisclosure,
 	Drawer,
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
-	DrawerHeader,
 	DrawerBody,
-	DrawerFooter,
-	Input,
 	Circle,
 } from '@chakra-ui/react';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { BsTwitterX } from 'react-icons/bs';

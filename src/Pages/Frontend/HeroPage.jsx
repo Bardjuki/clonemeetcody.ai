@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
+
 import {
 	Accordion,
 	AccordionButton,
@@ -9,19 +8,14 @@ import {
 	Box,
 	Button,
 	Center,
-	Circle,
-	Container,
 	Divider,
 	Flex,
-	GridItem,
 	Image,
 	ListItem,
 	SimpleGrid,
 	Stack,
 	Text,
 	UnorderedList,
-	Wrap,
-	WrapItem,
 } from '@chakra-ui/react';
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
