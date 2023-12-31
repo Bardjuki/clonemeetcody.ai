@@ -8,6 +8,7 @@ import BlogPage from './Pages/BlogPage'
 import { Stack } from '@chakra-ui/react'
 import SignIn from './Pages/SignIn'
 import SignUp from './Pages/SignUp'
+import UseCasesPage2 from './Pages/UseCasesPage 2'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HeroPage/>}/>
         <Route path='/use-cases' element={<UseCasesPage/>}/>
+        <Route path='/use-cases/page/2' element={<UseCasesPage2/>}/>
         <Route path='/enterprise' element={<EnterprisePage/>}/>
         <Route path='/pricing' element={<PricingPage/>}/>
         <Route path='/blog' element={<BlogPage/>}/>

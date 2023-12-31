@@ -22,7 +22,6 @@ const SignIn = () => {
 					borderRadius="lg"
 					boxShadow="lg"
 				>
-					{/* Header Image */}
 					<Box mb="4" color={'black'}>
 						<Image
 							src="https://meetcody.ai/wp-content/themes/cody_v1/assets/images/logo.svg"
@@ -31,7 +30,6 @@ const SignIn = () => {
 						/>
 					</Box>
 
-					{/* Form */}
 					<Text fontSize="1.25em" mb="4" textAlign="center">
 						Sign into your account
 					</Text>
@@ -44,10 +42,11 @@ const SignIn = () => {
 							<FormLabel>Password</FormLabel>
 							<Input placeholder="Password" />
 						</FormControl>
-
+						<NavLink to={'/'}>
 						<Button mt={3} type="submit" colorScheme="teal" width="full">
 							Sign In
 						</Button>
+						</NavLink>
 					</form>
                     <Flex mt={1} justifyContent={'space-between'}>
                         <NavLink to={'/auth/signup'}>

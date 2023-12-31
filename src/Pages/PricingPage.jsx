@@ -51,7 +51,7 @@ const PricingPage = () => {
 		'API',
 	];
 
-	const AdwanveFeatures = [
+	const AdvanceFeatures = [
 		'25,000 Credits',
 		'GPT 3.5 16K',
 		'GPT 4',
@@ -68,11 +68,11 @@ const PricingPage = () => {
 	return (
 		<>
 			<NavBar />
-			<Stack w={'100vw'} mb={'5em'}>
+			<Stack w={'98.5vw'} mb={'5em'}>
 				<Flex justifyContent={'center'} alignItems={'Center'}>
 					<Flex
 						mt={20}
-						w={869}
+						w={{base: 650, lg: 869}}
 						h={181}
 						justifyContent={'center'}
 						direction={'column'}
@@ -85,7 +85,7 @@ const PricingPage = () => {
 							<Text
 								bgGradient="linear(to-l, #7928CA, #FF0080)"
 								bgClip="text"
-								fontSize="4.5em"
+								fontSize={{base:'3.5em', lg:"4.5em"}}
 								fontWeight="bold"
 							>
 								Get Started for Free
@@ -303,7 +303,7 @@ const PricingPage = () => {
 									bgGradient="linear(to-l, #7928CA, #FF0080)"
 								/>
 								<UnorderedList mt={'1em'} listStyleType={'none'}>
-									{AdwanveFeatures.map((feature, index) => (
+									{AdvanceFeatures.map((feature, index) => (
 										<ListItem key={index}>
 											<Flex gap={1}>
 												<Box
@@ -372,16 +372,16 @@ const PricingPage = () => {
 					</SimpleGrid>
 				</Flex>
 
-				<Stack>
+				<Stack mt={'6em'}>
 					<Flex
 						flexDir={'column'}
 						justifyContent={'center'}
 						alignItems={'center'}
 					>
-						<Text fontSize={'4em'} fontWeight={550}>
+						<Text textAlign={'center'} fontSize={'4em'} fontWeight={550}>
 							Frequently Asked Questions
 						</Text>
-            <Box mt={'3em'} w={'60em'}  >
+            <Box mt={'3em'} w={{base:'35em', lg:'60em'}}  >
 						<Accordion allowMultiple>
 							<AccordionItem  border="2px" borderColor="violet" borderRadius={10}>
 								{({ isExpanded }) => (
@@ -548,8 +548,9 @@ const PricingPage = () => {
 					</Flex>
 				</Stack>
 				<Box
-					mt={'2em'}
-					h={400}
+          mb={'1em'}
+					mt={'8em'}
+					h={{base:450, lg:400}}
 					w={'98.5vw'}
 					bgGradient="linear(to-l, rgb(13,45,131), rgb(5,2,6), rgb(38,12,44))"
 					display={'flex'}
@@ -558,10 +559,10 @@ const PricingPage = () => {
 					alignItems={'center'}
 					borderRadius={30}
 				>
-					<Text mb={'1em'} fontSize={'4em'} fontWeight={600}>
+					<Text mb={'1em'} fontSize={'4em'} fontWeight={600} textAlign={'center'}>
           Get Started Free With A Personal Account
 					</Text>
-					<Text mb={'1em'} fontSize={'1.2em'} textColor={'gray.500'}>
+					<Text textAlign={'center'} mb={'1em'} fontSize={'1.2em'} textColor={'gray.500'}>
           Receive 250 credits per month, 100 documents & a free widget for your website.
 					</Text>
 					<MotionBox

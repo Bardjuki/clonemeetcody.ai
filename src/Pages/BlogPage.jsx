@@ -11,7 +11,7 @@ const BlogPage = () => {
   return (
     <>
     <NavBar/>
-    <Stack w={'100vw'} mb={'5em'}>
+    <Stack w={'98.5vw'} mb={'5em'}>
       <Flex justifyContent={'center'} alignItems={'Center'}>
       <Flex mt={20} w={869} h={181}  justifyContent={'center'} direction={'column'} >
         <Flex direction={'row'} justifyContent={'center'} alignItems={'center'}>
@@ -250,8 +250,8 @@ But first…</Text>
               <Center><Text fontSize={'2em'}>14</Text></Center>
             </Circle>
         </Box>
-        <Box mt={'2em'} h={367} w={'98.5vw'} bgGradient='linear(to-l, rgb(13,45,131), rgb(5,2,6), rgb(38,12,44))' display={'flex'} flexDir={'column'} justifyContent={'center'} alignItems={'center'} borderRadius={30}>
-              <Text  mb={'1em'} fontSize={'4em'} fontWeight={600}>Build Your Own Business AI</Text>
+        <Box mt={{base: '5em',lg: '10em'}} mb={{lg:'6em'}} h={367} w={'98.5vw'} bgGradient='linear(to-l, rgb(13,45,131), rgb(5,2,6), rgb(38,12,44))' display={'flex'} flexDir={'column'} justifyContent={'center'} alignItems={'center'} borderRadius={30}>
+              <Text  mb={'1em'} fontSize={'4em'} fontWeight={600} textAlign={'center'}>Build Your Own Business AI</Text>
               <MotionBox
 							as={Button}
 							width={'23em'}

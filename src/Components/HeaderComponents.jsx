@@ -60,7 +60,7 @@ const NavBar = () => {
 		},
 	];
 	return (
-		<>	
+		<>
 			<Stack display={{ lg: 'block', base: 'none' }}>
 				<Flex
 					bgColor={'rgb(18,19,36)'}
@@ -86,7 +86,7 @@ const NavBar = () => {
 						{menuItem.map((item, index) => (
 							<NavLink to={item.path} key={index}>
 								<Text
-									fontSize={21}
+									fontSize={15}
 									fontWeight={500}
 									textColor={'white'}
 									_hover={{ textColor: 'rgb(223,106,154)' }}
@@ -98,14 +98,14 @@ const NavBar = () => {
 					</Flex>
 					<Flex
 						gap={'1.5em'}
-						mr={'5em'}
+						mr={'3em'}
 						justifyContent={'center'}
 						alignItems={'center'}
 						textColor={'white'}
 					>
-						<NavLink to={'/login'}>
+						<NavLink to={'/auth/signin'}>
 							<Text
-								fontSize={'x-large'}
+								fontSize={18}
 								fontWeight={500}
 								_active={{ textColor: 'rgb(223,106,154)' }}
 								_hover={{ textColor: 'rgb(223,106,154)' }}
@@ -115,8 +115,8 @@ const NavBar = () => {
 						</NavLink>
 						<MotionBox
 							as={Button}
-							width={'14.5em'}
-							height={'4.75em'}
+							width={'11.5em'}
+							height={'3.8em'}
 							borderRadius={100}
 							border={'none'}
 							bgColor={'rgb(42,72,223)'}
@@ -127,8 +127,8 @@ const NavBar = () => {
 								transition: { duration: 0.5, repeat: Infinity },
 							}}
 						>
-							<NavLink to={'/login'}>
-								<Text textColor={'white'} fontSize={'1.5em'} fontWeight={600}>
+							<NavLink to={'/auth/signup'}>
+								<Text textColor={'white'} fontSize={'1.25em'} fontWeight={550}>
 									Join Free
 								</Text>
 							</NavLink>
@@ -136,7 +136,7 @@ const NavBar = () => {
 					</Flex>
 				</Flex>
 			</Stack>
-			<Stack display={{ lg: 'none', base: 'block' }} width={'100VW'}>
+			<Stack display={{ lg: 'none', base: 'block' }} width={{ lg: '95VW' }}>
 				<Flex
 					bgColor={'rgb(18,19,36)'}
 					h={108}
@@ -167,7 +167,11 @@ const NavBar = () => {
 					>
 						<DrawerOverlay boxSize={'3em'} />
 						<DrawerContent>
-							<DrawerCloseButton boxSize={'4em'} bgColor={'white'} color={'black'} />
+							<DrawerCloseButton
+								boxSize={'4em'}
+								bgColor={'white'}
+								color={'black'}
+							/>
 							<DrawerBody bgColor={'rgb(42,72,223)'}>
 								<Flex direction={'column'}>
 									<Box mt={'5em'}>
@@ -202,7 +206,7 @@ const NavBar = () => {
 										alignItems={'center'}
 										textColor={'white'}
 									>
-										<NavLink to={'/login'}>
+										<NavLink to={'/auth/signin'}>
 											<Text
 												fontWeight={600}
 												_active={{ textColor: 'rgb(223,106,154)' }}
@@ -211,18 +215,33 @@ const NavBar = () => {
 												Login
 											</Text>
 										</NavLink>
-
-										<Button
-											width={'10em'}
-											height={'3.5em'}
-											borderRadius={100}
-											border={'none'}
-											_hover={{ bgColor: 'rgb(223,106,154)' }}
-										>
-											<Text textColor={'blue'} fontWeight={700}>
-												Join Free
-											</Text>
-										</Button>
+										<NavLink to={'/auth/signup'}>
+											<MotionBox
+												ml={2}
+												as={Button}
+												width={'11.5em'}
+												height={'3.8em'}
+												borderRadius={100}
+												border={'none'}
+												bgColor={'white'}
+												_hover={{ bgColor: 'rgb(223,106,154)' }}
+												whileHover={{
+													x: [-10, 10, -10],
+													y: [-5, 8, -5],
+													transition: { duration: 0.5, repeat: Infinity },
+												}}
+											>
+												<NavLink to={'/auth/signup'}>
+													<Text
+														textColor={'blue'}
+														fontSize={'1.25em'}
+														fontWeight={550}
+													>
+														Join Free
+													</Text>
+												</NavLink>
+											</MotionBox>
+										</NavLink>
 									</Flex>
 									<Flex
 										gap={'0.5em'}
