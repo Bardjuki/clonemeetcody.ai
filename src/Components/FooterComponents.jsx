@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Box, Circle, Flex, Icon, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, Circle, Flex, Icon, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BsTwitterX } from 'react-icons/bs';
@@ -11,7 +11,7 @@ const FooterComponents = () => {
 			<Flex flexDirection={'column'}>
 				<Flex
 					mb={'6em'}
-					direction={{ base: 'column', lg: 'row' }}
+					direction={{ base: 'column',md: 'row' }}
 					justifyContent={'space-evenly'}
 				>
 					<Flex
@@ -21,7 +21,7 @@ const FooterComponents = () => {
 						justifyContent={'center'}
 						alignItems={'center'}
 					>
-						<Box ml={'2em'}>
+						<Box ml={{lg:'2em'}}>
 							<Link href="/">
 								<Image
 									width={'250PX'}
@@ -47,18 +47,18 @@ const FooterComponents = () => {
 						</Flex>
 					</Flex>
 					<Flex
-						ml={'20em'}
-						justifyContent={'start'}
-						textAlign={'start'}
-						direction={'column'}
-						w={420}
-						h={283}
+							justifyContent={'center'}
+							alignItems={{base:'center', md:'start'}}
+							text
+							direction={'column'}
+							mt={{ base: '1em', lg: '0em' }}
+						
 					>
 						<Text
 							mt={{ base: '1em', lg: '0em' }}
 							fontSize={'1.75em'}
 							fontWeight={600}
-							mb={5}
+							
 						>
 							Support
 						</Text>
@@ -72,15 +72,13 @@ const FooterComponents = () => {
 						<NavLink to={'/'}>Merketing</NavLink>
 					</Flex>
 					<Flex
-						justifyContent={'start'}
-						textAlign={'start'}
+						justifyContent={'center'}
+						alignItems={{base:'center', md:'start'}}
 						direction={'column'}
-						ml={{ base: '20em', lg: '10em' }}
 						mt={{ base: '1em', lg: '0em' }}
-						w={420}
-						h={283}
+					
 					>
-						<Text fontSize={'1.75em'} fontWeight={600} mr={'2em'}>
+						<Text fontSize={'1.75em'} fontWeight={600} mr={{lg:'2em'}}>
 							About
 						</Text>
 						<NavLink to={'/'}>Enterprise</NavLink>
@@ -92,17 +90,23 @@ const FooterComponents = () => {
 						<NavLink to={'/'}>Sign Up</NavLink>
 					</Flex>
 				</Flex>
-				<Flex mt={{lg:'4em'}} mb={'2em'} justifyContent={'center'} gap={5} >
+				<SimpleGrid  display={'flex'} flexDirection={{base:'column', md:'row'}} columns={{base:1, md:2, lg:3}} mt={{lg:'4em'}} mb={'2em'} justifyContent={'center'} alignItems={'center'} gap={3} >
+						<Flex gap={3}>
 						<NavLink to={'/'}>English</NavLink>
 						<NavLink to={'/'}>Español</NavLink>
 						<NavLink to={'/'}>Français</NavLink>
+						</Flex>
+						<Flex gap={3}>
 						<NavLink to={'/'}>Deutsch</NavLink>
 						<NavLink to={'/'}>日本語</NavLink>
 						<NavLink to={'/'}>한국어</NavLink>
+						</Flex>
+						<Flex gap={3}>
 						<NavLink to={'/'}>Português</NavLink>
 						<NavLink to={'/'}>Polski</NavLink>
 						<NavLink to={'/'}>العربية</NavLink>
-				</Flex>
+						</Flex>
+				</SimpleGrid>
 			</Flex>
 		</Stack>
 	);

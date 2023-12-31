@@ -71,7 +71,7 @@ const NavBar = () => {
 					<Box mt={'2em'} ml={'2em'}>
 						<Link href="/">
 							<Image
-								width={'200PX'}
+								width={'200px'}
 								src="https://meetcody.ai/wp-content/themes/cody_v1/assets/images/logo.svg"
 							/>
 						</Link>
@@ -136,7 +136,7 @@ const NavBar = () => {
 					</Flex>
 				</Flex>
 			</Stack>
-			<Stack display={{ lg: 'none', base: 'block' }} width={{ lg: '95VW' }}>
+			<Stack display={{ lg: 'none', base: 'block' }} width={ '100vw' }>
 				<Flex
 					bgColor={'rgb(18,19,36)'}
 					h={108}

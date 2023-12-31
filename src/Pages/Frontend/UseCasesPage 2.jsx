@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
-import NavBar from '../Components/HeaderComponents';
+import NavBar from '../../Components/HeaderComponents';
 import {
 	Box,
 	Button,
@@ -16,24 +16,24 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import FooterComponents from '../Components/FooterComponents';
+import FooterComponents from '../../Components/FooterComponents';
 
 const UseCasesPage2 = () => {
 	const MotionBox = motion(Box);
 	const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-	document.title = loading ? 'Loading...' : 'Your App Title';
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 5000); 
+	useEffect(() => {
+		document.title = loading ? 'Loading...' : 'Your App Title';
+		const timeout = setTimeout(() => {
+			setLoading(false);
+		}, 5000);
 
-    return () => clearTimeout(timeout);
-  }, []); 
+		return () => clearTimeout(timeout);
+	}, []);
 
-  const handleNavLinkClick = () => {
-    setLoading(true);
-  };
+	const handleNavLinkClick = () => {
+		setLoading(true);
+	};
 	return (
 		<>
 			<NavBar />

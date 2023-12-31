@@ -1,14 +1,14 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import HeroPage from './Pages/HeroPage'
-import EnterprisePage from './Pages/EnterprisePage'
-import UseCasesPage from './Pages/UseCasesPage'
-import PricingPage from './Pages/PricingPage'
-import BlogPage from './Pages/BlogPage'
+import HeroPage from './Pages/Frontend/HeroPage'
+import EnterprisePage from './Pages/Frontend/EnterprisePage'
+import UseCasesPage from './Pages/Frontend/UseCasesPage'
+import PricingPage from './Pages/Frontend/PricingPage'
+import BlogPage from './Pages/Frontend/BlogPage'
 import { Stack } from '@chakra-ui/react'
-import SignIn from './Pages/SignIn'
-import SignUp from './Pages/SignUp'
-import UseCasesPage2 from './Pages/UseCasesPage 2'
+import SignIn from './Pages/Frontend/SignIn'
+import SignUp from './Pages/Frontend/SignUp'
+import UseCasesPage2 from './Pages/Frontend/UseCasesPage 2'
 
 function App() {
 

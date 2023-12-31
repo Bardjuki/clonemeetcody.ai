@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import NavBar from '../Components/HeaderComponents';
+import NavBar from '../../Components/HeaderComponents';
 import {
 	Accordion,
 	AccordionButton,
@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import FooterComponents from '../Components/FooterComponents';
+import FooterComponents from '../../Components/FooterComponents';
 import { FaCheckCircle } from 'react-icons/fa';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 const PricingPage = () => {
@@ -36,7 +36,7 @@ const PricingPage = () => {
 		'Website Crawler',
 		'Embed Website Widget (3 Websites)',
 		'Customize Website Widget',
-		'Remove Cody Branding on Widget',
+		'Remove Karyawan.AI Branding on Widget',
 		'API',
 	];
 
@@ -62,7 +62,7 @@ const PricingPage = () => {
 		'Website Crawler',
 		'Embed Website Widget (50 Websites)',
 		'Customize Website Widget',
-		'Remove Cody Branding on Widget',
+		'Remove karyawan.AI Branding on Widget',
 		'API',
 	];
 	return (
@@ -72,7 +72,7 @@ const PricingPage = () => {
 				<Flex justifyContent={'center'} alignItems={'Center'}>
 					<Flex
 						mt={20}
-						w={{base: 650, lg: 869}}
+						w={{ base: 300, md: 600, lg: 869 }}
 						h={181}
 						justifyContent={'center'}
 						direction={'column'}
@@ -85,14 +85,15 @@ const PricingPage = () => {
 							<Text
 								bgGradient="linear(to-l, #7928CA, #FF0080)"
 								bgClip="text"
-								fontSize={{base:'3.5em', lg:"4.5em"}}
+								fontSize={{ base: '3.5em', lg: '4.5em' }}
 								fontWeight="bold"
+								textAlign={'center'}
 							>
 								Get Started for Free
 							</Text>
 						</Flex>
 						<Text textAlign={'center'}>
-							Whether you’re using Cody for personal use, with a team, or plan
+							Whether you’re using karyawan.AI for personal use, with a team, or plan
 							to provide it to your clients we have a package for you.
 						</Text>
 					</Flex>
@@ -101,13 +102,15 @@ const PricingPage = () => {
 					<SimpleGrid columns={{ base: 1, lg: 3 }} spacing={5}>
 						<Box
 							borderRadius={40}
-							w={419}
-							h={508}
+							w={{ lg: 419 }}
+							h={{ lg: 508 }}
 							bgColor={'rgb(25,26,48)'}
 							mr={3}
 						>
 							<Box mx={7} mt={'1em'} display={'flex'} flexDirection={'column'}>
-								<Text fontSize={'1.35em'}>Basic</Text>
+								<Text fontSize={'1.35em'} fontWeight={600}>
+									Karyawan
+								</Text>
 								<Text
 									fontSize={'2.5em'}
 									bgClip="text"
@@ -115,7 +118,7 @@ const PricingPage = () => {
 									fontWeight={600}
 									mt={1}
 								>
-									$29/mo
+									300k/mo
 								</Text>
 								<Divider
 									h={'0.1em'}
@@ -191,13 +194,15 @@ const PricingPage = () => {
 						</Box>
 						<Box
 							borderRadius={40}
-							w={419}
-							h={618}
+							w={{ lg: 419 }}
+							h={{ lg: 618 }}
 							bgColor={'rgb(25,26,48)'}
 							mr={3}
 						>
 							<Box mx={7} mt={'1em'} display={'flex'} flexDirection={'column'}>
-								<Text fontSize={'1.35em'}>Premium</Text>
+								<Text fontSize={'1.35em'} fontWeight={600}>
+									Manager
+								</Text>
 								<Text
 									fontSize={'2.5em'}
 									bgClip="text"
@@ -205,7 +210,7 @@ const PricingPage = () => {
 									fontWeight={600}
 									mt={1}
 								>
-									$99/mo
+									1000k/mo
 								</Text>
 								<Divider
 									h={'0.1em'}
@@ -281,13 +286,15 @@ const PricingPage = () => {
 						</Box>
 						<Box
 							borderRadius={40}
-							w={419}
-							h={618}
+							w={{ lg: 419 }}
+							h={{ lg: 618 }}
 							bgColor={'rgb(25,26,48)'}
 							mr={3}
 						>
 							<Box mx={7} mt={'1em'} display={'flex'} flexDirection={'column'}>
-								<Text fontSize={'1.35em'}>Premium</Text>
+								<Text fontSize={'1.35em'} fontWeight={600}>
+									Direktur
+								</Text>
 								<Text
 									fontSize={'2.5em'}
 									bgClip="text"
@@ -295,7 +302,7 @@ const PricingPage = () => {
 									fontWeight={600}
 									mt={1}
 								>
-									$249/mo
+									7500k/mo
 								</Text>
 								<Divider
 									h={'0.1em'}
@@ -372,186 +379,277 @@ const PricingPage = () => {
 					</SimpleGrid>
 				</Flex>
 
-				<Stack mt={'6em'}>
+				<Stack mt={{ base: '3em', lg: '6em' }}>
 					<Flex
 						flexDir={'column'}
 						justifyContent={'center'}
 						alignItems={'center'}
 					>
-						<Text textAlign={'center'} fontSize={'4em'} fontWeight={550}>
-							Frequently Asked Questions
+						<Text
+							textAlign={'center'}
+							fontSize={{ base: '2em', md: '3em', lg: '4em' }}
+							fontWeight={550}
+						>
+							Pertanyaan yang Sering Diajukan
 						</Text>
-            <Box mt={'3em'} w={{base:'35em', lg:'60em'}}  >
-						<Accordion allowMultiple>
-							<AccordionItem  border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-													What Is Cody?
+						<Box mt={'3em'} w={{ md: '35em', lg: '60em' }}>
+							<Accordion allowMultiple>
+								<AccordionItem
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Apa itu Karyawan.AI?
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												Karyawan.AI adalah karyawan virtual yang ditenagai oleh
+												kecerdasan buatan (AI) yang dapat membantu bisnis Anda
+												dalam berbagai tugas, seperti menjawab pertanyaan,
+												menyelesaikan tugas, memperkenalkan karyawan baru,
+												memberikan dukungan dan menyelesaikan masalah, serta
+												memberikan ide dan wawasan baru.
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+								<AccordionItem
+									mt={4}
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Bagaimana Cara Kerja Karyawan.AI
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												Karyawan.AI mencari semua data perusahaan yang
+												terakumulasi, termasuk artikel, PowerPoints, dan PDF,
+												dan mengambil 10 dokumen paling relevan untuk membuat
+												jawaban atas pertanyaan Anda dalam hitungan detik.
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+								<AccordionItem
+									mt={4}
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Apakah Saya Bisa Mengunggah Dokumen ke Karyawan.AI
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												Ya, Anda dapat mengunggah berbagai jenis dokumen ke
+												karyawan.AI, seperti Word, PowerPoint, dan PDF, dan karyawan.AI akan
+												segera mempelajari semua informasi tersebut dan
+												menggunakannya untuk memberikan jawaban atas pertanyaan
+												Anda.
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+								<AccordionItem
+									mt={4}
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Apa Itu Kredit?
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												<Box>
+													<Text>Kredit mengukur penggunaan. Contohnya:</Text>
+													<UnorderedList>
+														<ListItem>
+															Satu pertanyaan GPT-3.5 menggunakan 1 kredit.
+														</ListItem>
+														<ListItem>
+															Sebuah pertanyaan GPT-3.5 16K membutuhkan 5
+															kredit.
+														</ListItem>
+														<ListItem>
+															Sebuah pertanyaan GPT-4 mengonsumsi 10 kredit.
+														</ListItem>
+													</UnorderedList>
+													<Text>
+														Anda dapat melacak penggunaan kredit Anda secara
+														real-time di bawah tab penggunaan.
+													</Text>
 												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    Cody is an AI-powered virtual employee that can assist your business in various tasks, such as answering questions, completing tasks, onboarding new hires, providing support and troubleshooting, and bringing new ideas and insights.
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							<AccordionItem mt={4} border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-													How Does Cody Work?
-												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    Cody searches all of your accumulated company data, including articles, PowerPoints, and PDFs, and sources the top 10 most relevant documents to create an answer to your question in seconds.
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							<AccordionItem mt={4} border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-												Can I Upload Documents To Cody?
-												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    Yes, you can upload various types of documents to Cody, such as Word, PowerPoint, and PDFs, and Cody will instantly learn all that information and use it to provide answers to your questions.
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							<AccordionItem mt={4} border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-													What Are Credits?
-												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    <Box>
-                    <Text>Credits measure usage. For example:</Text>
-                    <UnorderedList>
-                      <ListItem>A GPT 3.5 query uses 1 credit.</ListItem>
-                      <ListItem>A GPT 3.5 16K query requires 5 credits.</ListItem>
-                      <ListItem>A GPT 4 query consumes 10 credits.</ListItem>
-                    </UnorderedList>
-                        <Text>You can track your credit consumption in real-time under the usage tab</Text>
-                    </Box>
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							<AccordionItem mt={4} border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-													Can I Train Cody On My Specific Business Proceses?
-												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    Yes, you can train Cody on your specific business processes, such as support documentation, allowing your team to quickly troubleshoot any issues.
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							<AccordionItem mt={4} border="2px" borderColor="violet" borderRadius={10}>
-								{({ isExpanded }) => (
-									<>
-										<h2>
-											<AccordionButton>
-												<Box fontSize={'1.5em'} as="span" flex="1" textAlign="left">
-													Is Cody A Replacement For Human Employees?
-												</Box>
-												{isExpanded ? (
-                          <Box color={'violet'}>
-                            <MinusIcon boxSize="1.5em" />
-                          </Box>
-												) : (
-                          <Box color={'violet'}>
-                            <AddIcon boxSize="1.5em" />
-                          </Box>
-												)}
-											</AccordionButton>
-										</h2>
-										<AccordionPanel pb={4} borderRadius={30}>
-                    No, Cody is not a replacement for human employees. Instead, it is designed to assist and augment your team, allowing them to focus on more important tasks and work more efficiently.
-										</AccordionPanel>
-									</>
-								)}
-							</AccordionItem>
-							
-						</Accordion>
-            </Box>
-            
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+								<AccordionItem
+									mt={4}
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Bisakah saya Melatih Karyawan.AI dengan Proses
+														Bisnis Spesifik Saya?
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												Iya, Anda bisa melatih karyawan.AI dengan proses bisnis
+												spesifik Anda, seperti dokumentasi dukungan, sehingga
+												tim Anda dapat dengan cepat menyelesaikan masalah apa
+												pun.
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+								<AccordionItem
+									mt={4}
+									border="2px"
+									borderColor="violet"
+									borderRadius={10}
+								>
+									{({ isExpanded }) => (
+										<>
+											<h2>
+												<AccordionButton>
+													<Box
+														fontSize={'1.5em'}
+														as="span"
+														flex="1"
+														textAlign="left"
+													>
+														Apakah Karyawan.AI Menggantikan Karyawan Manusia?
+													</Box>
+													{isExpanded ? (
+														<Box color={'violet'}>
+															<MinusIcon boxSize="1.5em" />
+														</Box>
+													) : (
+														<Box color={'violet'}>
+															<AddIcon boxSize="1.5em" />
+														</Box>
+													)}
+												</AccordionButton>
+											</h2>
+											<AccordionPanel pb={4} borderRadius={30}>
+												Tidak, Karyawan.AI bukan pengganti untuk karyawan
+												manusia. Sebaliknya, dirancang untuk membantu dan
+												memperkuat tim Anda, memungkinkan mereka fokus pada
+												tugas-tugas yang lebih penting dan bekerja dengan lebih
+												efisien.
+											</AccordionPanel>
+										</>
+									)}
+								</AccordionItem>
+							</Accordion>
+						</Box>
 					</Flex>
 				</Stack>
 				<Box
-          mb={'1em'}
+					mb={'1em'}
 					mt={'8em'}
-					h={{base:450, lg:400}}
-					w={'98.5vw'}
+					h={{ base: 450, lg: 400 }}
+					w={'100vw'}
 					bgGradient="linear(to-l, rgb(13,45,131), rgb(5,2,6), rgb(38,12,44))"
 					display={'flex'}
 					flexDir={'column'}
@@ -559,16 +657,27 @@ const PricingPage = () => {
 					alignItems={'center'}
 					borderRadius={30}
 				>
-					<Text mb={'1em'} fontSize={'4em'} fontWeight={600} textAlign={'center'}>
-          Get Started Free With A Personal Account
+					<Text
+						mb={'1em'}
+						fontSize={{ base: '2em', md: '2.5em', lg: '3.5em' }}
+						fontWeight={600}
+						textAlign={'center'}
+					>
+						Memberdayakan Tim Anda dengan Kecerdasan Buatan
 					</Text>
-					<Text textAlign={'center'} mb={'1em'} fontSize={'1.2em'} textColor={'gray.500'}>
-          Receive 250 credits per month, 100 documents & a free widget for your website.
+					<Text
+						textAlign={'center'}
+						mb={'1em'}
+						fontSize={'1.2em'}
+						textColor={'gray.500'}
+					>
+						Receive 250 credits per month, 100 documents & a free widget for
+						your website.
 					</Text>
 					<MotionBox
 						as={Button}
-						width={'23em'}
-						height={'4.5em'}
+						width={{ lg: '23em' }}
+						height={{ lg: '4.5em' }}
 						borderRadius={100}
 						border={'none'}
 						bgColor={'rgb(42,72,223)'}
